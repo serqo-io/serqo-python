@@ -69,4 +69,4 @@ Connection failures raise `ConnectionError`; request timeouts raise `TimeoutErro
 
 ## Publish a release
 
-Releases are published from GitHub Actions using PyPI Trusted Publishing. Configure a pending publisher on PyPI for owner `serqo-io`, repository `serqo-python`, workflow `release.yml`, and environment `pypi`. Then push a tag matching the version in `pyproject.toml`, such as `v0.1.0`. The workflow builds and checks both distributions before publishing them. See the [PyPI publishing guide](https://docs.pypi.org/trusted-publishers/creating-a-project-through-oidc/).
+Releases are published from GitHub Actions using PyPI Trusted Publishing. When creating a pending publisher, set the PyPI project name to `serqo`, owner to `serqo-io`, repository to `serqo-python`, workflow to `release.yml`, and environment to `pypi`. The project name must match `project.name` in `pyproject.toml`. Then push a tag matching the package version, such as `v0.1.0`. The workflow builds and checks both distributions before publishing them. See the [PyPI publishing guide](https://docs.pypi.org/trusted-publishers/creating-a-project-through-oidc/).
